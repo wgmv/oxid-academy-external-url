@@ -1,0 +1,27 @@
+{
+  "name": "wgmv/oa-external-url",
+  "description": "This adds an external url and displays a multilingual label.",
+  "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "widgets", "eShop"],
+  "homepage": "",
+  "version": "1.0",
+  "license": [
+    "GPL-3.0-only"
+  ],
+  "extra": {
+    "oxideshop": {
+      "blacklist-filter": [
+        "documentation/**/*.*"
+      ],
+      "target-directory": "wgmv/ExternalUrl"
+    }
+  },
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "wgmv\\ExternalUrl\\": "./"
+    }
+  }
+}
