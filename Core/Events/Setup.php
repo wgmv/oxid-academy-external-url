@@ -18,15 +18,15 @@ class Setup
     {
         $db = DatabaseProvider::getDb();
 
-        if($db->getOne('SELECT OA_EXTPRODUCT_URL from information_schema.COLUMNS where TABLE_NAME=oxarticles')) {
+        if(! $db->getOne("SELECT * from information_schema.COLUMNS where TABLE_NAME='oxarticles' AND COLUMN_NAME='OA_EXTPRODUCT_URL'")) {
             $db->execute('ALTER TABLE oxarticles ADD OA_EXTPRODUCT_URL varchar(255) null');
         }
 
-        if($db->getOne('SELECT OA_EXTPRODUCT_URL_LABEL from information_schema.COLUMNS where TABLE_NAME=oxarticles')) {
+        if(! $db->getOne("SELECT * from information_schema.COLUMNS where TABLE_NAME='oxarticles' AND COLUMN_NAME='OA_EXTPRODUCT_URL_LABEL'")) {
             $db->execute('ALTER TABLE oxarticles ADD OA_EXTPRODUCT_URL_LABEL varchar(255) null');
         }
 
-        if($db->getOne('SELECT OA_EXTPRODUCT_URL_LABEL_1 from information_schema.COLUMNS where TABLE_NAME=oxarticles')) {
+        if(! $db->getOne("SELECT * from information_schema.COLUMNS where TABLE_NAME='oxarticles' AND COLUMN_NAME='OA_EXTPRODUCT_URL_LABEL_1'")) {
             $db->execute('ALTER TABLE oxarticles ADD OA_EXTPRODUCT_URL_LABEL_1 varchar(255) null');
         }
     }
