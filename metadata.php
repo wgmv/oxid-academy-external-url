@@ -29,10 +29,8 @@ $aModule = [
 
     ],
     'controllers' => [
-//        'oa_datetime_widget' => wgmv\DateTimeWidget\Component\Widget\DateTimeWidget::class,
     ],
     'templates' => [
-//        'widget/oa_datetime_widget.tpl' => 'wgmv/DateTimeWidget/views/tpl/widget/oa_datetime_widget.tpl',
     ],
     'blocks' => [
         [
@@ -48,12 +46,12 @@ $aModule = [
 
     ],
     'settings' => [
-//        [
-//            'group' => 'main',
-//            'name' => 'blDateWidgetCaching',
-//            'type' => 'bool',
-//            'value' => false,
-//        ],
+        [
+//            'group' => '',
+//            'name' => '',
+//            'type' => '',
+//            'value' => ,
+        ],
 
     ],
     'events' => [
